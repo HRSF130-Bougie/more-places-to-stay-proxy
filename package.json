@@ -1,0 +1,32 @@
+{
+  "name": "more-places-to-stay-proxy",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon public/server.js --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HRSF130-Bougie/more-places-to-stay-proxy.git"
+  },
+  "author": "Jacob Johnson",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/HRSF130-Bougie/more-places-to-stay-proxy/issues"
+  },
+  "homepage": "https://github.com/HRSF130-Bougie/more-places-to-stay-proxy#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "morgan": "^1.10.0",
+    "nodemon": "^2.0.4",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "webpack": "^4.44.2"
+  },
+  "devDependencies": {
+    "http-proxy-middleware": "^1.0.5"
+  }
+}
