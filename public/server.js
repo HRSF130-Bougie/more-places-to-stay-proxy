@@ -14,8 +14,10 @@ app.use(morgan('dev'));
 app.use(express.static('public'));
 // app.use(express.static('client'))
 
-app.use('/api/listing', createProxyMiddleware({target:'http://localhost:3001', changeOrigin: true}));
-app.use('/api/listing/:listingId', createProxyMiddleware({target:'http://localhost:3002', changeOrigin: true}));
+app.use('/listing', createProxyMiddleware({target:'http://localhost:3001', changeOrigin: true}));
+app.use('/favorites', createProxyMiddleware({target:'http://localhost:3001', changeOrigin: true}));
+app.use('/api/booking/listing/:listingId', createProxyMiddleware({target:'http://localhost:3002', changeOrigin: true}));
+// app.use('/api/booking/listing/:reservations', createProxyMiddleware({target:'http://localhost:3002', changeOrigin: true}));
 app.use('/api/reviews/:id', createProxyMiddleware({target:'http://localhost:3003', changeOrigin: true}));
 app.use('/api/more-places', createProxyMiddleware({target:'http://localhost:3004', changeOrigin: true}));
 
